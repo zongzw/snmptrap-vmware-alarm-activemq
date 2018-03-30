@@ -1,0 +1,25 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "CBjqDGEUSryqiMdzHo9VFIUVjik=",
+			"path": "github.com/go-stomp/stomp",
+			"revision": "ba860900ef3307ecfe85ca14bc4838f24cfc7126",
+			"revisionTime": "2017-11-06T15:18:23Z"
+		},
+		{
+			"checksumSHA1": "LsLv9esDVK47nkoMEbDJ/jPH4C0=",
+			"path": "github.com/go-stomp/stomp/frame",
+			"revision": "ba860900ef3307ecfe85ca14bc4838f24cfc7126",
+			"revisionTime": "2017-11-06T15:18:23Z"
+		},
+		{
+			"checksumSHA1": "OM31UtuZsDlEJLbCOrIAtdiSYeQ=",
+			"path": "github.com/soniah/gosnmp",
+			"revision": "f15472a4cd6f6ea7929e4c7d9f163c49f059924f",
+			"revisionTime": "2018-02-19T07:25:37Z"
+		}
+	],
+	"rootPath": "snmptrap2activemq"
+}

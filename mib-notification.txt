@@ -1,0 +1,75 @@
+
+-- **********************************************************
+-- Notification parameters
+-- **********************************************************
+
+vmwVpxdTrapType OBJECT-TYPE
+    SYNTAX     SnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     obsolete
+    DESCRIPTION
+	"This is the alarm notification type."
+    ::= { vmwVC 301 }
+
+vmwVpxdHostName OBJECT-TYPE
+    SYNTAX     SnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     obsolete
+    DESCRIPTION
+	"This is the name of the vSphere host in the notification."
+    ::= { vmwVC 302 }
+
+vmwVpxdVMName OBJECT-TYPE
+    SYNTAX     SnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     obsolete
+    DESCRIPTION
+        "This is the name of the VM in the notification."
+    ::= { vmwVC 303 }
+
+vmwVpxdOldStatus OBJECT-TYPE
+    SYNTAX     SnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     current
+    DESCRIPTION
+	"This is the old status in the notification."
+    ::= { vmwVC 304 }
+
+vmwVpxdNewStatus OBJECT-TYPE
+    SYNTAX     SnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     current
+    DESCRIPTION
+	"This is the new status in the notification."
+    ::= { vmwVC 305 }
+
+vmwVpxdObjValue OBJECT-TYPE
+    SYNTAX     VmwLongSnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     current
+    DESCRIPTION
+	"This is the current object value in the notification."
+    ::= { vmwVC 306 }
+
+vmwVpxdTargetObj OBJECT-TYPE
+    SYNTAX     SnmpAdminString
+    MAX-ACCESS accessible-for-notify
+    STATUS     current
+    DESCRIPTION
+	"This is the current object in the notification. This may be
+	one of esx host name, vm name, or other. This value must not be empty."
+    ::= { vmwVC 307 }
+
+vmwVpxdTargetObjType OBJECT-TYPE
+    SYNTAX   INTEGER { unknown(1), host(2), vm(3), other(4)}
+    MAX-ACCESS accessible-for-notify
+    STATUS     current
+    DESCRIPTION
+	"This is the alarm target object type."
+    ::= { vmwVC 308 }
+
+OID: .1.3.6.1.4.1.6876.4.3.308.0, Integer: 3 
+OID: .1.3.6.1.4.1.6876.4.3.304.0, string: Green
+OID: .1.3.6.1.4.1.6876.4.3.305.0, string: Yellow
+OID: .1.3.6.1.4.1.6876.4.3.306.0, string: alarm-test-cpu-high - Metric CPU Usage = 100%
+OID: .1.3.6.1.4.1.6876.4.3.307.0, string: cloned-vm-1813
